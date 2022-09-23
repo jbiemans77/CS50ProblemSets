@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>In the c programming language, how many bytes are in a char variable?</h3>
+
+                <div class="correctText" id="multipleChoiceCorrectText"><h4>Correct!</h4></div>
+                <div class="incorrectText" id="multipleChoiceIncorrectText"><h4>Incorrect.</h4></div>
+
+                <button id="correctAnswerButton">1</button>
+                <button id="answerBButton">2</button>
+                <button id="answerCButton">4</button>
+                <button id="answerDButton">8</button>
+
+                <script>
+                    let multipleChoiceCorrectText = document.getElementById("multipleChoiceCorrectText");
+                    let multipleChoiceIncorrectText = document.getElementById("multipleChoiceIncorrectText");
+
+                    let correctAnswerButton = document.getElementById("correctAnswerButton");
+                    document.querySelector('#correctAnswerButton').addEventListener("click", function() {
+                        ButtonClickHandler(correctAnswerButton)
+                    });
+                    let answerB = document.getElementById("answerBButton");
+                    document.querySelector('#answerBButton').addEventListener("click", function() {
+                        ButtonClickHandler(answerB)
+                    });
+                    let answerC = document.getElementById("answerCButton");
+                    document.querySelector('#answerCButton').addEventListener("click", function() {
+                        ButtonClickHandler(answerC)
+                    });
+                    let answerD = document.getElementById("answerDButton");
+                    document.querySelector('#answerDButton').addEventListener("click", function() {
+                        ButtonClickHandler(answerD)
+                    });
+
+                    function ButtonClickHandler(id)
+                    {
+                        correctAnswerButton.style.color = '#ffffff';
+
+                        if(id == correctAnswerButton)
+                        {
+                            // Correct!
+                            id.style.backgroundColor = 'green';
+                            multipleChoiceCorrectText.style.display = 'block';
+                        }
+                        else
+                        {
+                            // Incorrect
+                            id.style.backgroundColor = 'red';
+                            multipleChoiceIncorrectText.style.display = 'block';
+                            correctAnswerButton.style.backgroundColor = 'green';
+                            id.style.color = '#ffffff';
+                        }
+
+                        correctAnswerButton.disabled = true;
+                        answerB.disabled = true;
+                        answerC.disabled = true;
+                        answerD.disabled = true;
+                    }
+                </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In the c programming language, what is the type declaration for a boolean variable?</h3>
+
+                <div class="correctText" id="freeResponseCorrectText"><h4>Correct!</h4></div>
+                <div class="incorrectText" id="freeResponseIncorrectText"><h4>Incorrect.</h4></div>
+
+                <input type="text" id="freeResponseAnswer">
+                <button id="freeResponseSubmit">Check Answer</button>
+
+                <script>
+
+                    let freeResponseSubmit = document.getElementById("freeResponseSubmit");
+                    let freeResponseAnswer = document.getElementById("freeResponseAnswer");
+
+                    document.querySelector('#freeResponseSubmit').addEventListener("click", function() {
+                        let freeResponseAnswerText = document.querySelector('#freeResponseAnswer').value;
+                        checkFreeResponseAnswer(freeResponseAnswerText);
+                    });
+
+                    function checkFreeResponseAnswer(answer)
+                    {
+                        freeResponseAnswer.style.color = '#ffffff';
+
+                        if (answer ==submit50 cs50/labs/2022/x/trivia "bool")
+                        {
+                            // Correct
+                            freeResponseAnswer.style.backgroundColor = 'green';
+                            freeResponseCorrectText.style.display = 'block';
+                        }
+                        else
+                        {
+                            // Incorrect
+                            freeResponseAnswer.style.backgroundColor = 'red';
+                            freeResponseIncorrectText.style.display = 'block';
+                        }
+
+                        freeResponseSubmit.disabled = true;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
