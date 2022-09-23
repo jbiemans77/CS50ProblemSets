@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Pset4: Third Page</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>PSet8 Sample Site</h1>
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="secondPage.html">Second Page (Table)</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="thirdPage.html">Third Page (Carousel)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fourthPage.html">Fourth Page (Form)</a>
+                </li>
+            </ul>
+        </header>
+        <main class="container">
+            <h3>This is a carousel!</h3>
+            <div id="carouselSample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselSample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselSample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselSample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image1.jpg" class="d-block w-100" alt="Forest Path.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image2.jpg" class="d-block w-100" alt="Leaf">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image3.jpg" class="d-block w-100" alt="Person in sunlight">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselSample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed tempor magna, in rutrum turpis. Ut bibendum ante dui, at hendrerit felis pharetra ac. Cras malesuada id diam non scelerisque. Duis metus dui, luctus vulputate lobortis eu, vehicula non justo. Nullam varius volutpat orci sit amet pretium. Quisque consectetur consequat dolor in viverra. Pellentesque tellus ante, luctus et elit rutrum, molestie facilisis mi. Morbi tincidunt iaculis arcu ac porttitor. Sed hendrerit est vel odio accumsan egestas. Curabitur eleifend, diam eget pharetra cursus, enim ante ultricies turpis, in ultricies mi enim sit amet orci. Praesent quis sem nisi. Pellentesque convallis molestie orci, vitae sodales nisl. Maecenas aliquet ac urna eget consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus id cursus sem, non vehicula enim. Curabitur molestie tempus enim sit amet ultricies.</p>
+            <hr>
+            <p><a href="fourthPage.html">Click here to see the next part of the site</a></p>
+        </main>
+        <footer class="footer">
+            Johan Biemans, 2022, CS50 PSet8
+        </footer>
+    </body>
+</html>

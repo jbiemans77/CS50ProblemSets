@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Pset4: Fourth Page</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>PSet8 Sample Site</h1>
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="secondPage.html">Second Page (Table)</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="thirdPage.html">Third Page (Carousel)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="fourthPage.html">Fourth Page (Form)</a>
+                </li>
+            </ul>
+        </header>
+        <main class="container">
+            <h3>This is a Form!</h3>
+            (Input Validation not implimented)
+            <br>
+            <hr>
+            <br>
+            <script>
+                function displayContents()
+                {
+                    let email = document.getElementById("email");
+                    let inputPassword = document.getElementById("inputPassword");
+                    let rememberMe = document.getElementById("rememberMe");
+
+                    alert("Email: " + email.value + ". Password: " + inputPassword.value + ". Remember: " + rememberMe.checked);
+                }
+              </script>
+
+              <form enctype="multipart/form-data" onsubmit="displayContents()">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword">
+                </div>
+                <div id="passwordHelpBlock" class="form-text">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                </div>
+                <br>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberMe">
+                  <label class="form-check-label" for="rememberMe">Remember Me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed tempor magna, in rutrum turpis. Ut bibendum ante dui, at hendrerit felis pharetra ac. Cras malesuada id diam non scelerisque. Duis metus dui, luctus vulputate lobortis eu, vehicula non justo. Nullam varius volutpat orci sit amet pretium. Quisque consectetur consequat dolor in viverra. Pellentesque tellus ante, luctus et elit rutrum, molestie facilisis mi. Morbi tincidunt iaculis arcu ac porttitor. Sed hendrerit est vel odio accumsan egestas. Curabitur eleifend, diam eget pharetra cursus, enim ante ultricies turpis, in ultricies mi enim sit amet orci. Praesent quis sem nisi. Pellentesque convallis molestie orci, vitae sodales nisl. Maecenas aliquet ac urna eget consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus id cursus sem, non vehicula enim. Curabitur molestie tempus enim sit amet ultricies.</p>
+            <hr>
+            <p><a href="index.html">Click here to go back to the start</a></p>
+        </main>
+        <footer class="footer">
+            Johan Biemans, 2022, CS50 PSet8
+        </footer>
+    </body>
+</html>
